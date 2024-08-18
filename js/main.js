@@ -176,7 +176,6 @@ let menuMobi = document.querySelectorAll('.menu__mobile p');
 [...menuMobi].forEach((menuu) => {
     menuu.onclick = () => {
         menuMobile.classList.remove('hidden');
-        console.log(menuu);
         menu.classList.add('hidden');
         let act = document.querySelector('.act-mobi');
         if(act) {
