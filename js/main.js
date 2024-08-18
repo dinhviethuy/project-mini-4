@@ -177,26 +177,37 @@ let menuMobi = document.querySelectorAll('.menu__mobile p');
     menuu.onclick = () => {
         menuMobile.classList.remove('hidden');
         menu.classList.add('hidden');
+        close.classList.add('hidden');
         let act = document.querySelector('.act-mobi');
         if(act) {
             let active = document.querySelector('.active');
             active.classList.remove('active');
+            let a = document.querySelector('.act');
+            a.classList.remove('act');
             act.classList.remove('act-mobi');
             menuu.classList.add('act-mobi');
             if(menuu.getAttribute('data-id') == '1') {
                 let one = document.querySelector('.one');
+                let f = document.querySelector('.menu-one');
+                f.classList.add('act');
                 one.classList.add('active');
                 next = 1;
             } else if(menuu.getAttribute('data-id') == '2') {
                 let two = document.querySelector('.two');
+                let f = document.querySelector('.menu-two');
+                f.classList.add('act');
                 two.classList.add('active');
                 next = 2;
             } else if(menuu.getAttribute('data-id') == '3') {
                 let three = document.querySelector('.three');
+                let f = document.querySelector('.menu-three');
+                f.classList.add('act');
                 three.classList.add('active');
                 next = 3;
             } else if(menuu.getAttribute('data-id') == '4') {
                 let four = document.querySelector('.four');
+                let f = document.querySelector('.menu-four');
+                f.classList.add('act');
                 four.classList.add('active');
                 next = 4;
             }    
