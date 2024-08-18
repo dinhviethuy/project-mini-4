@@ -173,27 +173,30 @@ body.addEventListener('mousemove', (e) => {
 
 let menuMobi = document.querySelectorAll('.menu__mobile p'); 
 
-[...menuMobi].forEach((menu) => {
-    menu.onclick = () => {
+[...menuMobi].forEach((menuu) => {
+    menuu.onclick = () => {
+        menuMobile.classList.remove('hidden');
+        console.log(menuu);
+        menu.classList.add('hidden');
         let act = document.querySelector('.act-mobi');
         if(act) {
             let active = document.querySelector('.active');
             active.classList.remove('active');
             act.classList.remove('act-mobi');
-            menu.classList.add('act-mobi');
-            if(menu.getAttribute('data-id') == '1') {
+            menuu.classList.add('act-mobi');
+            if(menuu.getAttribute('data-id') == '1') {
                 let one = document.querySelector('.one');
                 one.classList.add('active');
                 next = 1;
-            } else if(menu.getAttribute('data-id') == '2') {
+            } else if(menuu.getAttribute('data-id') == '2') {
                 let two = document.querySelector('.two');
                 two.classList.add('active');
                 next = 2;
-            } else if(menu.getAttribute('data-id') == '3') {
+            } else if(menuu.getAttribute('data-id') == '3') {
                 let three = document.querySelector('.three');
                 three.classList.add('active');
                 next = 3;
-            } else if(menu.getAttribute('data-id') == '4') {
+            } else if(menuu.getAttribute('data-id') == '4') {
                 let four = document.querySelector('.four');
                 four.classList.add('active');
                 next = 4;
