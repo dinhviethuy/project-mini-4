@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .loader {
+            width: 100%;
+            background: #000;
+            z-index: 9999;
+            height: 100vh;
+        }
+
+        body {
+            background-color: #04b4e0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+            font-size: 15px;
+            font-family: poppins, Helvetica, sans-serif;
+            line-height: 1.65em;
+            overflow: hidden;
+            color: #d5d5d5;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+
+        .lm-animated-bg {
+            position: absolute;
+            width: auto;
+            height: auto;
+            top: -28px;
+            left: -28px;
+            right: -28px;
+            bottom: -28px;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            loader = document.querySelector('.loader');
+            loader.style.display = 'none';
+            profile = document.querySelector('.profile');
+            profile.classList.remove('hidden');
+        }
+    </script>
+    <span class="loader"></span>
+    <div class="lm-animated-bg" style="background-image: url(&quot;img/main_bg.png&quot;); background-position: calc(50% - 9.09302px) calc(50% - 1.66697px);"></div>
+    <div class="profile hidden">
+        <div class="container">
+            <div class="row">
+                <div class="background">
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <div class="row__card">
+                                <div class="card__image">
+                                    <img class="card__image--radius" src="assets/image/image.jpg" alt="Profile Image">
+                                </div>
+                                <div class="card__content">
+                                    <h1 class="card__title">Đinh Viết Huy</h1>
+                                    <span class="card__info>">Web Developer</span>
+                                    <div class="card__social">
+                                        <a href="#" class="card__link">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#" class="card__link">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        <a href="#" class="card__link">
+                                            <i class="fa-brands fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8">
+                            <div class="content content__home active one">
+                                <h1 class="content__title">Đinh Viết Huy</h1>
+                                <span class="content__text">Web Developer</span>
+                            </div>
+                            <div class="content content__home two">
+                                <h1 class="content__title">Đinh Viết Huy 2</h1>
+                                <span class="content__text">Web Developer</span>
+                            </div>
+                            <div class="content content__home three">
+                                <h1 class="content__title">Đinh Viết Huy 3</h1>
+                                <span class="content__text">Web Developer</span>
+                            </div>
+                            <div class="content content__home four">
+                                <h1 class="content__title">Đinh Viết Huy 4</h1>
+                                <span class="content__text">Web Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <i class="fa-solid fa-house act menu-one" data-id="1"></i>
+        <i class="fa-solid fa-user menu-two" data-id="2"></i>
+        <i class="fa-solid fa-school menu-three" data-id="3"></i>
+        <i class="fa-solid fa-envelope menu-four" data-id="4"></i>
+    </div>
+    <div class="angle">
+        <i class="fa-solid fa-angle-left" data-id="prev"></i>
+        <i class="fa-solid fa-angle-right" data-id="next"></i>
+    </div>
+    <script src="js/jquery.slim.min.js"></script
+    <script src="js/bootstrap.bundle.min.js"></script?>
+    <script src="js/main.js"></script>
+</body>
+</html>
