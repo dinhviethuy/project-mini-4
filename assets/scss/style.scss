@@ -16,8 +16,7 @@
 
 .row .background {
     width: 100%;
-    height: 700px;
-    background-color: #444444;
+    height: 750px;
     border-radius: 40px;
 }
 
@@ -28,7 +27,7 @@
 
 %col0-xl {
     width: 100%;
-    height: 700px;
+    height: 750px;
     padding: 0;
 }
 
@@ -36,6 +35,13 @@
     @extend %col0-xl;
     background-color: #222222;
     border-radius: 40px;
+}
+
+.col-xl-11 {
+  @include display-flex;
+  background-color: #444444;
+  @include border-radius(40px);
+  padding: 0;
 }
 
 .col-xl-4 {
@@ -47,6 +53,7 @@
     @include flex-direction(column);
     justify-content: center;
     align-items: center;
+    // padding: 80px 0;
 }
 
 .card {
@@ -58,24 +65,45 @@
         color: #fff;
     }
     &__image {
-        margin-bottom: 20px;
+        position: relative;
+        margin-bottom: 40px;
+        z-index: 1;
         &--radius {
             @include border-radius(50%);
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
             aspect-ratio: 1;
+        }
+
+        &:after {
+          position: absolute;
+          opacity: .3;
+          top: 6%;
+          left: 6%;
+          border-radius: 300px;
+          content: '';
+          height: calc(100% + 0px);
+          width: calc(100% + 0px);
+          background-image: -webkit-repeating-radial-gradient(center center, #fff, #fff 1px, transparent 0px, transparent 100%);
+          background-image: -moz-repeating-radial-gradient(center center, #fff, #fff 1px, transparent 0px, transparent 100%);
+          background-image: -ms-repeating-radial-gradient(center center, #fff, #fff 1px, transparent 0px, transparent 100%);
+          -webkit-background-size: 6px 6px;
+          -moz-background-size: 6px 6px;
+          background-size: 6px 6px;
+          z-index: -1;
         }
     }
 
     &__content h1 {
         margin: 0;
-        font-size: 26px;
+        font-size: 28px;
         margin-bottom: 5px;
+        font-weight: 600;
     }
     &__content span {
         color: #AAAAAA;
-        font-size: 16px;
+        font-size: 18px;
     }
     &__link i {
         text-decoration: none;
@@ -108,6 +136,8 @@
     &__title {
         font-size: 50px;
         color: #fff;
+        font-weight: 700;
+        text-align: center;
     }
 
     &__text {
@@ -128,9 +158,9 @@
 }
 
 .menu {
-    background-color: #696969;
-    position: absolute;
-    top: 30px;
+    background-color: #444444;
+    // position: absolute;
+    top: 0px;
     right: -90px;
     @include display-flex;
     @include flex-direction(column);
@@ -143,10 +173,11 @@
     font-size: 20px;
     &__text {
       position: absolute;
-      top: 30px;
-      right: -45px;
+      top: 0px;
+      right: 65px;
       padding: 0 20px;
       height: 250px;
+      width: 150px;
       @include display-flex;
       @include flex-direction(column);
       font-size: 20px;
@@ -155,13 +186,19 @@
       color: #fff;
       &--white {
         background: #04B4E0;
-        width: 50px;
         width: auto;
         padding: 0 10px;
       }
     }
 }
 
+.col-xl-1 {
+  @include display-flex;
+  @include flex-direction(column);
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
 .hiddenn {
   visibility: hidden;
 }
@@ -172,9 +209,8 @@
 }
 
 .angle {
-  background-color: #696969;
-  position: absolute;
-  top: 560px;
+  background-color: #444444;
+  top: 650px;
   right: -90px;
   @include display-flex;
   @include flex-direction(column);
@@ -284,8 +320,15 @@
   .col-xl-4, .menu__text {
     display: none;
   }
-  .menu {
+  .menu, .laptop {
     display: none;
+  }
+
+  .col-xl-1 {
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    height: auto;
   }
 
   .angle {
@@ -332,7 +375,7 @@
     }
   }
   .content {
-    height: 100%;
+    height: 100vh;
     background-color: #222222;
   }
   .col-xl-8 {
