@@ -366,9 +366,11 @@
   }
   .col-xl-1 {
     position: absolute;
-    right: 0;
+    right: 20px;
     bottom: 30px;
     height: auto;
+    padding: 0;
+    width: auto;
   }
   .angle {
     right: 20px;
