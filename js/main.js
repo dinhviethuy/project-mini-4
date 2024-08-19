@@ -215,3 +215,11 @@ let menuMobi = document.querySelectorAll('.menu__mobile p');
     }
 });
 
+body.onresize = () => {
+    if(window.innerWidth < 992) {
+       body.style.background = '#222222';
+    } else {
+        body.style.background = "#04B4E0";
+    }
+}
+
